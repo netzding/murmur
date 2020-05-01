@@ -6,6 +6,5 @@ RUN apk add --update --no-cache murmur
 VOLUME /var/lib/murmur/
 EXPOSE 64738/tcp
 EXPOSE 64738/udp
-USER murmur
 
-ENTRYPOINT ["/usr/bin/murmurd", "-fg"]
+ENTRYPOINT ["/usr/bin/murmurd", "-fg", "-ini", "/etc/murmur.ini"]
